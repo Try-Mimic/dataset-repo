@@ -1,0 +1,78 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	--red: #FF5953;
+	--yellow: #E6C02A;
+	--green: #53C32B;
+	padding: 0;
+	margin: 0;
+	width: 100vw;
+	min-height: 100vh;
+	display: grid;
+	place-content: center;
+	grid-template-columns: 1fr;
+	font-family: 'Fira Sans', monospace;
+	background-color: #bcd;
+}
+#window {
+	font-size: calc(18px + 2vw);
+	width: 90%;
+	max-width: 14em;
+	margin: auto;
+	filter: drop-shadow(.5vmin 1.5vmin 6px rgba(0,0,0,.2)) drop-shadow(1vmin .5vmin 8px rgba(0,0,0,.2));
+}
+
+#bar {
+	width: 100%;
+	height: 1em;
+	background: #000000;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: repeat(3, .8em) 1fr;
+	padding: .1em;
+	border-top-left-radius: .25em;
+	border-top-right-radius: .25em;
+}
+
+.button {
+	width: .5em;
+	max-width: .5em;
+	height: .5em;
+	border-radius: .5em;
+	background: var(--red);
+	justify-self: center;
+}
+
+.button + .button {
+	background: var(--yellow);
+}
+
+.button:last-of-type {
+	background: var(--green);
+}
+
+main {
+	padding: 1.8em;
+	background: #000000;
+	color: #fff;
+	line-height: 1.4;
+	font-weight: normal;
+	border-bottom-right-radius: .25em;
+	border-bottom-left-radius: .25em;
+}
+
+p {
+	margin: .5em 0 1em;
+}
+
+i {
+	font-style: normal;
+	color: #A6E22E;
+}
+
+i:last-of-type {
+	color: #F72A70;
+}
